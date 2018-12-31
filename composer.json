@@ -3,7 +3,7 @@
     "description": "Devortix admin module",
     "type": "yii2-extension",
     "keywords": ["yii2", "yii 2", "admin module"],
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "version": "1.0.0.0",
     "authors": [
         {
