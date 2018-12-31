@@ -5,6 +5,7 @@
     "keywords": ["yii2", "yii 2", "admin module"],
     "license": "MIT",
     "version": "1.0.0.0",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Roman Skorohod",
