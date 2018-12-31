@@ -12,10 +12,7 @@
             "homepage": "https://devortix.com"
         }
     ],
-    "support": {
-        "issues": "https://github.com/devortix/yii2-admin/issues?state=open",
-        "source": "https://github.com/ElisDN/yii2-admin"
-    },
+  
     "require": {
         "yiisoft/yii2": "~2.0",
         "yiister/yii2-gentelella": "~1.0",
