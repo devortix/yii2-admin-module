@@ -1,0 +1,42 @@
+{
+    "name": "devortix/yii2-admin",
+    "description": "Devortix admin module",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "yii 2", "admin module"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Roman Skorohod",
+            "email": "devortix@gmail.com",
+            "homepage": "https://devortix.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/devortix/yii2-admin/issues?state=open",
+        "source": "https://github.com/ElisDN/yii2-admin"
+    },
+    "require": {
+        "yiisoft/yii2": "~2.0",
+        "yiister/yii2-gentelella": "~1.0",
+        "lajax/yii2-translate-manager": "^1.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "devortix\\admin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "devortix\\admin\\tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
