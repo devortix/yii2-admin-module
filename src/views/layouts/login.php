@@ -28,8 +28,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
 
 <body class="nav-<?=!empty($_COOKIE['menuIsCollapsed']) && $_COOKIE['menuIsCollapsed'] == 'true' ? 'sm' : 'md'?>">
     <?php $this->beginBody();?>
-    <div class="container body left_col " style="display: flex; align-items-center">
-        <div class="container-fluid">
+    <div class="container body left_col " style="display: flex; align-items: center">
+        <div class="container-fluid" style="width: 100%">
             <div class="main_container">
                 <?php echo $content ?>
             </div>
