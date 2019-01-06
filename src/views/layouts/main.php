@@ -5,7 +5,7 @@
  * @var \yii\web\View $this
  */
 
-use devortix\admin\Module as adminModule;
+use devortix\admin\Module as AdminModule;
 use yii\helpers\Html;
 $bundle = yiister\gentelella\assets\Asset::register($this);
 
@@ -72,7 +72,9 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                             <h3>General</h3>
                             <?=
 \yiister\gentelella\widgets\Menu::widget(
-    adminModule::getDefaultItems()
+    [
+        "items" => AdminModule::getDefaultItems(),
+    ]
 )
 ?>
                         </div>
