@@ -31,7 +31,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
     <div class="container body left_col">
 
         <div class="main_container">
-
+            <?php echo $content ?>
         </div>
 
     </div>
