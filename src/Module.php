@@ -21,7 +21,7 @@ class Module extends \yii\base\Module
         }
     }
 
-    public function getDefaultItems()
+    public static function getDefaultItems()
     {
         return [
             ["label" => Yii::t('admin-panel', 'Main'), "url" => "/admin", "icon" => "home"],

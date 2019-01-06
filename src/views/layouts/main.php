@@ -5,8 +5,8 @@
  * @var \yii\web\View $this
  */
 
+use devortix\admin\Module as adminModule;
 use yii\helpers\Html;
-
 $bundle = yiister\gentelella\assets\Asset::register($this);
 
 ?>
@@ -48,7 +48,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     <!-- menu prile quick info -->
                     <div class="profile">
                         <div class="profile_pic">
-                            <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="..." class="img-circle profile_img">
+                            <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="..."
+                                class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
                             <span>Welcome,</span>
@@ -71,38 +72,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                             <h3>General</h3>
                             <?=
 \yiister\gentelella\widgets\Menu::widget(
-    [
-        "items" => [
-            ["label" => Yii::t('admin-panel', 'Main'), "url" => "/admin", "icon" => "home"],
-            ["label" => Yii::t('admin-panel', 'Feedback'), "url" => ["/feedback/admin"], "icon" => "envelope"],
-            ["label" => Yii::t('admin-panel', 'Users'), "url" => ["/user/admin"], "icon" => "users"],
-            [
-                "label" => \Yii::t('admin-panel', 'Settings'),
-                "url" => "#",
-                "icon" => "cogs",
-                "items" => [
-                    ['label' => Yii::t('admin-panel', 'Clear cache'), 'url' => ['/admin/default/flush-cache']],
-
-                ],
-            ],
-            [
-                "label" => \Yii::t('admin-panel', 'Translate manager'),
-                "url" => "#",
-                "icon" => "globe",
-                "items" => [
-                    ['label' => Yii::t('language', 'List of languages'), 'url' => ['/translatemanager/language/list']],
-
-                    ['label' => Yii::t('language', 'Scan'), 'url' => ['/translatemanager/language/scan']],
-                    ['label' => Yii::t('language', 'Optimize'), 'url' => ['/translatemanager/language/optimizer']],
-                    ['label' => Yii::t('language', 'Im-/Export'), "url" => "#", 'items' => [
-                        ['label' => Yii::t('language', 'Import'), 'url' => ['/translatemanager/language/import']],
-                        ['label' => Yii::t('language', 'Export'), 'url' => ['/translatemanager/language/export']],
-                    ],
-                    ],
-                ],
-            ],
-        ],
-    ]
+    adminModule::getDefaultItems()
 )
 ?>
                         </div>
@@ -147,7 +117,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                             <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                     aria-expanded="false">
-                                    <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="">
+                                    <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>"
+                                        alt="">
                                     <?=!empty(\Yii::$app->user->identity->profile->name) ?
 \Yii::$app->user->identity->profile->name :
 \Yii::$app->user->identity->username
@@ -182,7 +153,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     <li>
                                         <a>
                                             <span class="image">
-                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="Profile Image" />
+                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>"
+                                                    alt="Profile Image" />
                                             </span>
                                             <span>
                                                 <span>John Smith</span>
@@ -197,7 +169,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     <li>
                                         <a>
                                             <span class="image">
-                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="Profile Image" />
+                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>"
+                                                    alt="Profile Image" />
                                             </span>
                                             <span>
                                                 <span>John Smith</span>
@@ -212,7 +185,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     <li>
                                         <a>
                                             <span class="image">
-                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="Profile Image" />
+                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>"
+                                                    alt="Profile Image" />
                                             </span>
                                             <span>
                                                 <span>John Smith</span>
@@ -227,7 +201,8 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     <li>
                                         <a>
                                             <span class="image">
-                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="Profile Image" />
+                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>"
+                                                    alt="Profile Image" />
                                             </span>
                                             <span>
                                                 <span>John Smith</span>
