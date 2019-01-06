@@ -48,7 +48,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                     <!-- menu prile quick info -->
                     <div class="profile">
                         <div class="profile_pic">
-                            <img src="http://placehold.it/128x128" alt="..." class="img-circle profile_img">
+                            <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="..." class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
                             <span>Welcome,</span>
@@ -147,7 +147,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                             <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
                                     aria-expanded="false">
-                                    <img src="http://placehold.it/128x128" alt="">
+                                    <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="">
                                     <?=!empty(\Yii::$app->user->identity->profile->name) ?
 \Yii::$app->user->identity->profile->name :
 \Yii::$app->user->identity->username
@@ -182,7 +182,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     <li>
                                         <a>
                                             <span class="image">
-                                                <img src="http://placehold.it/128x128" alt="Profile Image" />
+                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="Profile Image" />
                                             </span>
                                             <span>
                                                 <span>John Smith</span>
@@ -197,7 +197,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     <li>
                                         <a>
                                             <span class="image">
-                                                <img src="http://placehold.it/128x128" alt="Profile Image" />
+                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="Profile Image" />
                                             </span>
                                             <span>
                                                 <span>John Smith</span>
@@ -212,7 +212,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     <li>
                                         <a>
                                             <span class="image">
-                                                <img src="http://placehold.it/128x128" alt="Profile Image" />
+                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="Profile Image" />
                                             </span>
                                             <span>
                                                 <span>John Smith</span>
@@ -227,7 +227,7 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                     <li>
                                         <a>
                                             <span class="image">
-                                                <img src="http://placehold.it/128x128" alt="Profile Image" />
+                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>" alt="Profile Image" />
                                             </span>
                                             <span>
                                                 <span>John Smith</span>
