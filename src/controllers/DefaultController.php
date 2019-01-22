@@ -2,30 +2,11 @@
 
 namespace devortix\admin\controllers;
 
-use yii\filters\AccessControl;
-
 /**
  * Default controller for the `admin` module
  */
 class DefaultController extends \yii\web\Controller
 {
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-
-                'rules' => [
-                    [
-                        'allow' => true,
-                        //'actions' => ['*'],
-                        'roles' => ['@'],
-                    ],
-
-                ],
-            ],
-        ];
-    }
 
     public function actionIndex()
     {

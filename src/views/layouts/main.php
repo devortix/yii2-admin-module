@@ -149,76 +149,44 @@ $bundle = yiister\gentelella\assets\Asset::register($this);
                                 <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
                                     aria-expanded="false">
                                     <i class="fa fa-envelope-o"></i>
-                                    <span class="badge bg-green">6</span>
+                                    <span class="badge bg-green">
+                                        <?php
+echo !empty($this->params['messagesCount']) ? $this->params['messagesCount'] : 0
+?>
+                                    </span>
                                 </a>
                                 <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                    <?php
+if (isset($this->params['lastMessages']) && is_array($this->params['lastMessages'])):
+    foreach ($this->params['lastMessages'] as $item):
+    ?>
                                     <li>
-                                        <a>
+                                        <a href="<?=\yii\helpers\Url::to(['/feedback/admin/view', 'id' => $item['id']])?>">
+
                                             <span class="image">
                                                 <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>"
                                                     alt="Profile Image" />
                                             </span>
-                                            <span>
-                                                <span>John Smith</span>
-                                                <span class="time">3 mins ago</span>
+                                            <span style="display: inline-flex">
+                                                <span>
+                                                    <?=$item['name'];?></span>
+                                                <span class="time">
+                                                    <?=\Yii::$app->formatter->asDate($item['created_at'], 'php:Y-m-d H:i');?>
+                                                </span>
                                             </span>
                                             <span class="message">
-                                                Film festivals used to be do-or-die moments for movie makers. They were
-                                                where...
+                                                <?=mb_substr($item['content'], 0, 100);?>...
                                             </span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a>
-                                            <span class="image">
-                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>"
-                                                    alt="Profile Image" />
-                                            </span>
-                                            <span>
-                                                <span>John Smith</span>
-                                                <span class="time">3 mins ago</span>
-                                            </span>
-                                            <span class="message">
-                                                Film festivals used to be do-or-die moments for movie makers. They were
-                                                where...
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            <span class="image">
-                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>"
-                                                    alt="Profile Image" />
-                                            </span>
-                                            <span>
-                                                <span>John Smith</span>
-                                                <span class="time">3 mins ago</span>
-                                            </span>
-                                            <span class="message">
-                                                Film festivals used to be do-or-die moments for movie makers. They were
-                                                where...
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            <span class="image">
-                                                <img src="<?php echo \Yii::$app->user->identity->profile->getAvatarUrl(128); ?>"
-                                                    alt="Profile Image" />
-                                            </span>
-                                            <span>
-                                                <span>John Smith</span>
-                                                <span class="time">3 mins ago</span>
-                                            </span>
-                                            <span class="message">
-                                                Film festivals used to be do-or-die moments for movie makers. They were
-                                                where...
-                                            </span>
-                                        </a>
-                                    </li>
+                                    <?php
+endforeach;
+endif;
+?>
+
                                     <li>
                                         <div class="text-center">
-                                            <a href="/">
+                                            <a href="<?=\yii\helpers\Url::to(['/feedback/admin/index'])?>">
                                                 <strong>See All Alerts</strong>
                                                 <i class="fa fa-angle-right"></i>
                                             </a>
